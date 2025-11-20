@@ -9,7 +9,7 @@ int top = -1;
 
 void push(char data) {
     if (top == MAX_SIZE - 1) {
-        cout << "Stack overflow!\n";
+        cout << "Stack overflow!\n"; 
         return;
     }
     stackArr[++top] = data;

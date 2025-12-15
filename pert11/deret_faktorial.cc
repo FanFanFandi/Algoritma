@@ -11,7 +11,6 @@ int faktorial(int n) {
 
 int main() {
     int n;
-
     cout << "Masukkan n: ";
     cin >> n;
 

@@ -1,0 +1,52 @@
+BEGIN
+    DECLARE list_mk as ARRAY
+    DECLARE pilihan as INTEGER
+
+    DO
+        DISPLAY "=== MENU SISTEM PERKULIAHAN ==="
+        DISPLAY "1. Tambah Mata Kuliah"
+        DISPLAY "2. Tampilkan Mata Kuliah"
+        DISPLAY "3. Ubah Mata Kuliah"
+        DISPLAY "4. Hapus Mata Kuliah"
+        DISPLAY "5. Keluar"
+        INPUT pilihan
+
+        IF pilihan == 1 THEN
+            INPUT kode_mk
+            INPUT nama_mk
+            INPUT sks
+            INPUT dosen
+            ADD data ke list_mk
+
+        ELSE IF pilihan == 2 THEN
+            FOR setiap data dalam list_mk
+                DISPLAY kode_mk, nama_mk, sks, dosen
+            END FOR
+
+        ELSE IF pilihan == 3 THEN
+            INPUT kode_mk_dicari
+            IF data ditemukan THEN
+                INPUT nama_mk_baru
+                INPUT sks_baru
+                INPUT dosen_baru
+                UPDATE data
+            ELSE
+                DISPLAY "Data tidak ditemukan"
+            END IF
+
+        ELSE IF pilihan == 4 THEN
+            INPUT kode_mk_dicari
+            IF data ditemukan THEN
+                DELETE data
+            ELSE
+                DISPLAY "Data tidak ditemukan"
+            END IF
+
+        ELSE IF pilihan == 5 THEN
+            DISPLAY "Terima kasih"
+        ELSE
+            DISPLAY "Pilihan tidak valid"
+        END IF
+
+    WHILE pilihan != 5
+END

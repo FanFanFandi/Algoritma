@@ -1,0 +1,30 @@
+Mulai
+Deklarasi array namaBarang, hargaBarang
+Deklarasi jumlahBarang
+
+Input jumlahBarang
+
+Untuk i dari 0 sampai jumlahBarang - 1
+    Input namaBarang[i]
+    Input hargaBarang[i]
+Selesai loop
+
+Ulangi
+    Tampilkan menu:
+        1. Tampilkan daftar barang
+        2. Transaksi
+        3. Keluar
+    Input pilihan
+
+    Jika pilihan = 1
+        Tampilkan semua barang dan harga
+    Jika pilihan = 2
+        total = 0
+        Untuk setiap barang
+            Input jumlah beli
+            total = total + (harga * jumlah)
+        Tampilkan total bayar
+    Jika pilihan = 3
+        Keluar program
+Sampai pilihan = 3
+Selesai
